@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 //@Repository
 //@RestController
 public class PaymentService {
-    public void  pay(){
-        System.out.println("Paying....................");
-    }
-    @PostConstruct
-    public  void  afterIni(){
-        System.out.println("Before Paying");
-    }
-
-    @PreDestroy
-    public  void  beforeDestory(){
-        System.out.println("After Paying");
-    }
+//    public void  pay(){
+//        System.out.println("Paying....................");
+//    }
+//    @PostConstruct
+//    public  void  afterIni(){
+//        System.out.println("Before Paying");
+//    }
+//
+//    @PreDestroy
+//    public  void  beforeDestory(){
+//        System.out.println("After Paying");
+//    }
 }
