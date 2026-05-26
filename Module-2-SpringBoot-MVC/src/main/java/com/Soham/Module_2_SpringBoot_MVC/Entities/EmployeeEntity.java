@@ -1,5 +1,6 @@
 package com.Soham.Module_2_SpringBoot_MVC.Entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,5 +14,6 @@ public class EmployeeEntity {
     private  String name;
     private  String email;
     private  Integer age;
+    @JsonProperty("isActive")
     private  Boolean isActive;
 }

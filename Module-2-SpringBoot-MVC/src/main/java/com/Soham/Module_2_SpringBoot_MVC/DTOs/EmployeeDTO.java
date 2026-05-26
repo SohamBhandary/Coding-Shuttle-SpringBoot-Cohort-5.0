@@ -1,5 +1,6 @@
 package com.Soham.Module_2_SpringBoot_MVC.DTOs;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,5 +15,6 @@ public class EmployeeDTO {
     private  String name;
     private  String email;
     private  Integer age;
+  @JsonProperty("isActive")
     private  Boolean isActive;
 }
