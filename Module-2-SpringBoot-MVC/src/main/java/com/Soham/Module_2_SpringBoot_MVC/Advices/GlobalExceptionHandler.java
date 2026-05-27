@@ -17,20 +17,21 @@ import java.util.stream.Collectors;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<ApiError> handleResourceNotFound(ResourceNotFoundException exception){
+    public ResponseEntity<ApiResponse<?>> handleResourceNotFound(ResourceNotFoundException exception){
         ApiError apiError=ApiError.builder().
                 status(HttpStatus.NOT_FOUND).
                 msg(exception.getMessage()).build();
-        return new ResponseEntity<>(apiError,HttpStatus.NOT_FOUND);
+        return buildErrorResponseEntity(apiError);
     }
+
 
     @ExceptionHandler(Exception.class)
 
-        public ResponseEntity<ApiError> handleInternalServal(Exception exception){
+        public ResponseEntity<ApiResponse<?>> handleInternalServal(Exception exception){
             ApiError apiError=ApiError.builder().
                     status(HttpStatus.INTERNAL_SERVER_ERROR).
                     msg(exception.getMessage()).build();
-            return new ResponseEntity<>(apiError,HttpStatus.INTERNAL_SERVER_ERROR);
+        return buildErrorResponseEntity(apiError);
 
     }
 
@@ -46,4 +47,9 @@ return new ResponseEntity<>(apiError,HttpStatus.BAD_REQUEST);
 
 
     }
+
+    private ResponseEntity<ApiResponse<?>> buildErrorResponseEntity(ApiError apiError) {
+        return new ResponseEntity<>(new ApiResponse<>(apiError),apiError.getStatus());
+    }
+
 }
