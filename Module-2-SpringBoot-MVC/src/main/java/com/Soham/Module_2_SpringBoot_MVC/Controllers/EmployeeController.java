@@ -2,6 +2,7 @@ package com.Soham.Module_2_SpringBoot_MVC.Controllers;
 
 import com.Soham.Module_2_SpringBoot_MVC.DTOs.EmployeeDTO;
 import com.Soham.Module_2_SpringBoot_MVC.Entities.EmployeeEntity;
+import com.Soham.Module_2_SpringBoot_MVC.Exceptions.ResourceNotFoundException;
 import com.Soham.Module_2_SpringBoot_MVC.Repositories.EmployeeRepository;
 import com.Soham.Module_2_SpringBoot_MVC.Services.EmployeeService;
 import jakarta.validation.Valid;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @RestController
@@ -24,10 +26,13 @@ public class EmployeeController {
 
 //        return "This is our first controller";
 //    }
+
+
+
     @GetMapping("/{id}")
     public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable Long id){
        Optional  <EmployeeDTO> emp= employeeService.getEmpById(id);
-     return emp.map(emp1->ResponseEntity.ok(emp1)).orElse(ResponseEntity.notFound().build());
+     return emp.map(emp1->ResponseEntity.ok(emp1)).orElseThrow(()-> new ResourceNotFoundException("Not found"+id));
     }
     @GetMapping()
     public ResponseEntity <List<EmployeeDTO>> getAllEmployee(){
