@@ -1,6 +1,7 @@
 package com.Soham.Module_3_Hibernate_SpringBoot_Jpa.Repositories;
 
 import com.Soham.Module_3_Hibernate_SpringBoot_Jpa.Entities.Product;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -12,7 +13,7 @@ import java.util.Optional;
 @Repository
 public interface ProductRepository extends JpaRepository<Product,Long> {
 
-    Product findByTitle(String title);
+    List<Product> findBy(Sort sort);
 
     List<Product> findByCreatedAtAfter(LocalDateTime after);
     List<Product> findByQuantityAndPrice(int quantity,int price);
