@@ -23,7 +23,7 @@ public class Appoinment {
     @Column(length = 500)
     private String reason;
 
-    @ManyToOne //owning side
+    @ManyToOne(fetch = FetchType.LAZY) //owning side
     @JoinColumn(nullable = false)
     private Patient patient;
 
