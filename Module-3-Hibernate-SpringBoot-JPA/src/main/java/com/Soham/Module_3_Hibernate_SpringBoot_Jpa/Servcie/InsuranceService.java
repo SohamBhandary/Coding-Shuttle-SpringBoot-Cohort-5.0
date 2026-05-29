@@ -25,6 +25,15 @@ public class InsuranceService {
     }
 
     @Transactional
+    public void remove( Long patientId){
+        Patient patient= patientRepository.findById(patientId).orElseThrow();
+        patient.setInsurance(null);
+
+
+
+    }
+
+    @Transactional
     public void deletePatient(Long patientId){
         Patient patient= patientRepository.findById(patientId).orElseThrow();
         patientRepository.deleteById(patientId);

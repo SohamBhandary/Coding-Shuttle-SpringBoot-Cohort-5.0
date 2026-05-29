@@ -10,4 +10,7 @@ public interface PatientRepository extends JpaRepository<Patient,Long> {
 
 
 
+    @Query("select p from Patient p LEFT JOIN FETCH p.appoinments")
+    List<Patient> getAllPatietnsWithAppoint();
+
 }
