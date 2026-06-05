@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 @Setter
 
 @Audited
-public class PostEntity extends AuditableEntity {
+public class PostEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

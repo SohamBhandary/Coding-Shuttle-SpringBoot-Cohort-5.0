@@ -3,6 +3,7 @@ package com.Soham.Module_4_Prod_Ready_features.Services;
 
 import com.Soham.Module_4_Prod_Ready_features.DTOs.PostDTO;
 import com.Soham.Module_4_Prod_Ready_features.Entities.PostEntity;
+import com.Soham.Module_4_Prod_Ready_features.Exceptions.ResourceNotFoundException;
 import com.Soham.Module_4_Prod_Ready_features.Repositories.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
