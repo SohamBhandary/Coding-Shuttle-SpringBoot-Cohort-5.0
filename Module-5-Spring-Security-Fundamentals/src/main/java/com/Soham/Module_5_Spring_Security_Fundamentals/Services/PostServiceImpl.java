@@ -3,6 +3,7 @@ package com.Soham.Module_5_Spring_Security_Fundamentals.Services;
 
 import com.Soham.Module_5_Spring_Security_Fundamentals.DTOs.PostDTO;
 import com.Soham.Module_5_Spring_Security_Fundamentals.Entities.PostEntity;
+import com.Soham.Module_5_Spring_Security_Fundamentals.Entities.User;
 import com.Soham.Module_5_Spring_Security_Fundamentals.Exceptions.ResourceNotFoundException;
 import com.Soham.Module_5_Spring_Security_Fundamentals.Repositories.PostRepository;
 import lombok.RequiredArgsConstructor;
@@ -38,6 +39,7 @@ public class PostServiceImpl {
 
 
     public PostDTO getPostById(Long postId) {
+      User user= (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         PostEntity postEntity = postRepository
                 .findById(postId)
                 .orElseThrow(() -> new ResourceNotFoundException("Post not found with id "+postId));

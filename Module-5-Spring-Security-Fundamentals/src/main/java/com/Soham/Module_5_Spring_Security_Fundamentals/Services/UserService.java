@@ -51,6 +51,9 @@ public class UserService implements UserDetailsService {
 
 
     }
+    public User getUseryId(Long userId){
+        return userRepository.findById(userId).orElseThrow();
+    }
 
 
 }
