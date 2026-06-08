@@ -26,7 +26,7 @@ public class JWTSerivce {
     }
 
     public String generateToken(User user){
-      return   Jwts.builder().subject(user.getId().toString())
+      return   Jwts.builder().subject(user.getId().toString()) // here subject is id
                 .claim("email",user.getEmail())
                 .claim("roles", Set.of("ADMIN","USER"))
                 .issuedAt(new Date())

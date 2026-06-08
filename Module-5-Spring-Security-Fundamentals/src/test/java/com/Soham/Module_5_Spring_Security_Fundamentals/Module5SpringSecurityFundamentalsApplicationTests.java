@@ -16,7 +16,7 @@ class Module5SpringSecurityFundamentalsApplicationTests {
 	void contextLoads() {
 
 		User user= new User(4L,"soham@gmail.com","1234");
-		String token= jwtSerivce.generateToken(user);
+		 String token= jwtSerivce.generateToken(user);
 		System.out.println(token);
 		Long id=jwtSerivce.getUserIdFromToken(token);
 		System.out.println(id);
