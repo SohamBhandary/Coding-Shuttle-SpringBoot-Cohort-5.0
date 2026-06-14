@@ -1,4 +1,4 @@
-package com.Soham.Module_5_Spring_Security_Fundamentals.Config;
+package Config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
