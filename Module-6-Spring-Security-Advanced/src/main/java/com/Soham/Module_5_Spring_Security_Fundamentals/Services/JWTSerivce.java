@@ -28,7 +28,7 @@ public class JWTSerivce {
     public String generateAccessToken(User user){
       return   Jwts.builder().subject(user.getId().toString()) // here subject is id
                 .claim("email",user.getEmail())
-                .claim("roles", Set.of("ADMIN","USER"))
+                .claim("roles", user.getRoles().toString())
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis()+1000*60*10))
                 .signWith(getSecretKey())
