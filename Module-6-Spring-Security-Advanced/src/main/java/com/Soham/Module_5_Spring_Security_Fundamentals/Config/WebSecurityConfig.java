@@ -1,4 +1,4 @@
-package Config;
+package com.Soham.Module_5_Spring_Security_Fundamentals.Config;
 
 // FIX 1: Fixed the import path to match your actual package structure
 import Handlers.OauthSuccessHandler;
@@ -16,6 +16,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import static com.Soham.Module_5_Spring_Security_Fundamentals.Entities.enums.Permission.*;
 import static com.Soham.Module_5_Spring_Security_Fundamentals.Entities.enums.Role.ADMIN;
 import static com.Soham.Module_5_Spring_Security_Fundamentals.Entities.enums.Role.CREATOR;
 
@@ -37,7 +38,7 @@ public class WebSecurityConfig {
                         .requestMatchers(publicRoutes).permitAll()
                         .requestMatchers(HttpMethod.GET, "/posts/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/posts/**")
-                        .hasAnyRole(ADMIN.name(), CREATgOR.name())
+                        .hasAnyRole(ADMIN.name(), CREATOR.name())
                         .requestMatchers(HttpMethod.POST, "/posts/**")
                         .hasAnyAuthority(POST_CREATE.name())
                         .requestMatchers(HttpMethod.GET, "/posts/**")

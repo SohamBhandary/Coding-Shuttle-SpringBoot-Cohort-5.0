@@ -1,6 +1,8 @@
 package com.Soham.Module_5_Spring_Security_Fundamentals.Entities;
 
+import com.Soham.Module_5_Spring_Security_Fundamentals.Entities.enums.Permission;
 import com.Soham.Module_5_Spring_Security_Fundamentals.Entities.enums.Role;
+import com.Soham.Module_5_Spring_Security_Fundamentals.Utils.PermissionMapping;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -34,6 +36,10 @@ public class User implements UserDetails {
     @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @Enumerated(EnumType.STRING)
+    private Set<Permission> permissions;
 
 
     public Collection<? extends GrantedAuthority> getAuthorities() {
