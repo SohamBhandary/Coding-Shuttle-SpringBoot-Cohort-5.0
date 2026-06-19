@@ -57,7 +57,7 @@ class Module7SpringbootTestingApplicationTests {
 			return a/b;
 		} catch (ArithmeticException e) {
 			log.error("Arithmentic excepiton occured: "+e.getLocalizedMessage());
-			throw new ArithmeticException("Tried to divide by zero");
+			throw new ArithmeticException("Tried to divide by z");
 		}
 	}
 
