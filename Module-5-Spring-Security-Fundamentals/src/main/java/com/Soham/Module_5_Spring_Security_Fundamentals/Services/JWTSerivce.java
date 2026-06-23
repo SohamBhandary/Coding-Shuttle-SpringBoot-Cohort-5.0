@@ -36,7 +36,8 @@ public class JWTSerivce {
     }
 
     public Long getUserIdFromToken(String token){
-        Claims claims=Jwts.parser().verifyWith(getSecretKey()).build().parseSignedClaims(token)
+        Claims claims = Jwts.parser()
+                .verifyWith(getSecretKey()).build().parseSignedClaims(token)
                 .getPayload();
 
         return Long.valueOf( claims.getSubject());
