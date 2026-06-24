@@ -19,7 +19,7 @@ public class AuthService {
         Authentication authentication= authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(loginDTO.getEmail(),loginDTO.getPassword())
         );
-        User user=(User) authentication.getPrincipal();
-        return jwtSerivce.generateToken(user);
+        User user1=(User) authentication.getPrincipal();
+        return jwtSerivce.generateToken(user1);
     }
 }
