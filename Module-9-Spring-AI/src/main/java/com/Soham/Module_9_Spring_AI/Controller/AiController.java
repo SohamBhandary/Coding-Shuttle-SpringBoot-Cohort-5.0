@@ -2,6 +2,7 @@ package com.Soham.Module_9_Spring_AI.Controller;
 
 
 import com.Soham.Module_9_Spring_AI.Service.AiService;
+import com.Soham.Module_9_Spring_AI.Service.RAGService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.document.Document;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import java.util.List;
 public class AiController {
 
     private final AiService aiService;
+    private final RAGService ragService;
 
 
     @GetMapping("/joke")
@@ -26,7 +28,7 @@ public class AiController {
     @GetMapping("/embed")
     public float[] embed(){
 
-         var res=  aiService.getEmbedding("cricket");
+         var res=  aiService.getEmbedding("quantam");
 
         return res;
 
@@ -43,6 +45,13 @@ public class AiController {
     public List<Document> similartySerach(@RequestBody String text) {
         System.out.println("ok");
        return aiService.similaritySearch(text);
+
+    }
+
+    @PostMapping("/search")
+    public String retriveFromVectorEmbeddings(@RequestBody String text) {
+
+        return ragService.askAI(text);
 
     }
 
