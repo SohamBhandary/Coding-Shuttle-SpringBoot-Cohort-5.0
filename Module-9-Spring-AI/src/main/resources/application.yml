@@ -21,16 +21,26 @@ spring:
       embedding:
         options:
           model: text-embedding-3-large
-          dimensions: 1536  # <-- FIXED: Tell OpenAI to downsample from 3072 to 1536
+          dimensions: 1536
 
     vectorstore:
       pgvector:
         initialize-schema: true
-        dimensions: 1536    # <-- Matches the embedding option above
-#        index-type: hnsw
-#        distance-type: cosine_distance
-#        max-document-batch-size: 10000
+        dimensions: 1536
+        index-type: hnsw
+        distance-type: cosine_distance
+        max-document-batch-size: 10000
+
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always
+            table-name: chat_memory
 
 logging:
   level:
     org.springframework.ai.chat.client: DEBUG
+    org.springframework.ai.chat.client.advisor: DEBUG
+    org.springframework.ai.vectorstore: DEBUG
+    org.springframework.ai.openai: DEBUG

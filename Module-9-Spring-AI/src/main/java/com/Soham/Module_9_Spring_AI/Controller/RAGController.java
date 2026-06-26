@@ -2,9 +2,7 @@ package com.Soham.Module_9_Spring_AI.Controller;
 
 import com.Soham.Module_9_Spring_AI.Service.RAGService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/rag")
@@ -17,5 +15,13 @@ public class RAGController {
         ragService.ingestPDFtoVectorDB();
 
         return "PDF ingested successfully!";
+    }
+
+    @PostMapping("/advisor")
+    public String askWithAdvisor(
+            @RequestParam String userId,
+            @RequestBody String prompt) {
+
+        return ragService.askAiWithAdvisor(prompt, userId);
     }
 }
