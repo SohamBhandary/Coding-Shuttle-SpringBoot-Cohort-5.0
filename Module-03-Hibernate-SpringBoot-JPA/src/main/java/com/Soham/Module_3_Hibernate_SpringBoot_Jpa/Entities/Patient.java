@@ -37,5 +37,6 @@ public class Patient {
 
     @OneToMany(mappedBy = "patient",cascade = CascadeType.ALL,fetch = FetchType.LAZY) //inverse side(mapped by)
     private Set<Appoinment> appoinments= new HashSet<>();
+    //
 
 }
