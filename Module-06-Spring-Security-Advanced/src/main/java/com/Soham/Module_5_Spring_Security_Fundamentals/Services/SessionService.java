@@ -33,7 +33,7 @@ public class SessionService {
     public void validateSession(String refreshToken){
      Session session=    sessionRepository.findByRefreshToken(refreshToken).orElseThrow(()-> new SessionAuthenticationException("Session not found"+refreshToken));
      session.setLastUsedAt(LocalDateTime.now());
-     sessionRepository.save(session);
+     sessionRepository.save(session);//
 
     }
 }
