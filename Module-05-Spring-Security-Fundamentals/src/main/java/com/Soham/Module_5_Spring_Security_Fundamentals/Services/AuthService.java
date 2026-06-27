@@ -20,6 +20,6 @@ public class AuthService {
                 new UsernamePasswordAuthenticationToken(loginDTO.getEmail(),loginDTO.getPassword())
         );
         User user1=(User) authentication.getPrincipal();
-        return jwtSerivce.generateToken(user1);
+        return jwtSerivce.generateToken(user1);//
     }
 }
