@@ -21,6 +21,7 @@ public class EmployeeService {
     private final EmployeeRepository employeeRepository;
     private final ModelMapper modelMapper;
 
+    //
     public Optional<EmployeeDTO> getEmpById(Long id) {
 //    Optional <EmployeeEntity> employeeEntity=  employeeRepository.findById(id).orElseThrow();
 ////        ModelMapper modelMapper= new ModelMapper();
