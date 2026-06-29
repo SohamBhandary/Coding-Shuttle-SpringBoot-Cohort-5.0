@@ -6,6 +6,7 @@ import com.Soham.Module_11_Caching_Concurrent_Transactions.entities.Employee;
 import com.Soham.Module_11_Caching_Concurrent_Transactions.exceptions.ResourceNotFoundException;
 import com.Soham.Module_11_Caching_Concurrent_Transactions.repositories.EmployeeRepository;
 import com.Soham.Module_11_Caching_Concurrent_Transactions.services.EmployeeService;
+import com.Soham.Module_11_Caching_Concurrent_Transactions.services.SalaryAccountService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -13,6 +14,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,13 +24,12 @@ import java.util.List;
 public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRepository employeeRepository;
+    private final SalaryAccountService salaryAccountService;
     private final ModelMapper modelMapper;
-    private final String cacheName="employees";
-
-
+    private final String CACHE_NAME = "employees";
 
     @Override
-    @Cacheable(cacheNames =cacheName,key = "#id")
+    @Cacheable(cacheNames = CACHE_NAME, key = "#id")
     public EmployeeDto getEmployeeById(Long id) {
         log.info("Fetching employee with id: {}", id);
         Employee employee = employeeRepository.findById(id)
@@ -41,8 +42,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-
-    @CachePut(cacheNames = cacheName,key = "#result.id")
+    @CachePut(cacheNames = CACHE_NAME, key = "#result.id")
+    @Transactional
     public EmployeeDto createNewEmployee(EmployeeDto employeeDto) {
         log.info("Creating new employee with email: {}", employeeDto.getEmail());
         List<Employee> existingEmployees = employeeRepository.findByEmail(employeeDto.getEmail());
@@ -53,13 +54,15 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         Employee newEmployee = modelMapper.map(employeeDto, Employee.class);
         Employee savedEmployee = employeeRepository.save(newEmployee);
+
+        salaryAccountService.createAccount(savedEmployee);
+
         log.info("Successfully created new employee with id: {}", savedEmployee.getId());
         return modelMapper.map(savedEmployee, EmployeeDto.class);
     }
 
     @Override
-
-    @CachePut(cacheNames = cacheName,key = "#id")
+    @CachePut(cacheNames = CACHE_NAME, key = "#id")
     public EmployeeDto updateEmployee(Long id, EmployeeDto employeeDto) {
         log.info("Updating employee with id: {}", id);
         Employee employee = employeeRepository.findById(id)
@@ -82,7 +85,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    @CacheEvict(cacheNames = cacheName,key = "#id")
+    @CacheEvict(cacheNames = CACHE_NAME, key = "#id")
     public void deleteEmployee(Long id) {
         log.info("Deleting employee with id: {}", id);
         boolean exists = employeeRepository.existsById(id);
@@ -94,4 +97,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeRepository.deleteById(id);
         log.info("Successfully deleted employee with id: {}", id);
     }
+
+
 }
