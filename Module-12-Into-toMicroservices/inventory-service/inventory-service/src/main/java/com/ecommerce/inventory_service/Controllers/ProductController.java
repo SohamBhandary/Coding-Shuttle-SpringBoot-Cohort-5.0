@@ -37,7 +37,7 @@ public class ProductController {
                 .getInstances("order-service").getFirst();
 
         String res = restClient.get()
-                .uri(orderService.getUri() + "/api/v1/orders/helloOrders")
+                .uri(orderService.getUri() + "/orders/core/helloOrders")
                 .retrieve()
                 .body(String.class);
 
