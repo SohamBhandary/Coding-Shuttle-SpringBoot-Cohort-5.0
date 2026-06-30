@@ -1,6 +1,9 @@
 package com.ecommerce.order_service.Service;
 
+import com.ecommerce.order_service.Clients.InventoryFeignClient;
 import com.ecommerce.order_service.DTO.OrderRequestDto;
+import com.ecommerce.order_service.Entitty.OrderItem;
+import com.ecommerce.order_service.Entitty.OrderStatus;
 import com.ecommerce.order_service.Entitty.Orders;
 import com.ecommerce.order_service.OrderRepository.OrderRepository;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +19,7 @@ import java.util.List;
 public class OrderService {
     private final OrderRepository orderRepository;
     private final ModelMapper modelMapper;
+    private final InventoryFeignClient inventoryFeignClient;
 
 
     public List<OrderRequestDto> getAllOrders() {
@@ -29,6 +33,23 @@ public class OrderService {
         Orders order = orderRepository.findById(id).orElseThrow(() -> new RuntimeException("Order not found"));
         return modelMapper.map(order, OrderRequestDto.class);
     }
+
+    public OrderRequestDto createOrder(OrderRequestDto orderRequestDto) {
+        log.info("Calling the createOrder method");
+        Double totalPrice = inventoryFeignClient.reduceStocks(orderRequestDto);
+
+        Orders orders = modelMapper.map(orderRequestDto, Orders.class);
+        for(OrderItem orderItem: orders.getItems()) {
+            orderItem.setOrder(orders);
+        }
+        orders.setTotalPrice(totalPrice);
+        orders.setOrderStatus(OrderStatus.CONFIRMED);
+
+        Orders savedOrder = orderRepository.save(orders);
+
+        return modelMapper.map(savedOrder, OrderRequestDto.class);
+    }
+
 
 
 

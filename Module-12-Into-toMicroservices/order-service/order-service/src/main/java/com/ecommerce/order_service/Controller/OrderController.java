@@ -1,5 +1,6 @@
 package com.ecommerce.order_service.Controller;
 
+import com.ecommerce.order_service.Clients.InventoryFeignClient;
 import com.ecommerce.order_service.DTO.OrderRequestDto;
 import com.ecommerce.order_service.Service.OrderService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,12 +19,19 @@ public class OrderController {
 
     private final OrderService orderService;
 
+
     @GetMapping("/helloOrders")
     public String helloOrders() {
         return "Hello from Orders Service";
     }
 
 
+
+    @PostMapping("/create-order")
+    public ResponseEntity<OrderRequestDto> createOrder(@RequestBody OrderRequestDto orderRequestDto) {
+        OrderRequestDto orderRequestDto1 = orderService.createOrder(orderRequestDto);
+        return ResponseEntity.ok(orderRequestDto1);
+    }
 
     @GetMapping
     public ResponseEntity<List<OrderRequestDto>> getAllOrders(HttpServletRequest httpServletRequest) {
