@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="259893e6-5a3b-482b-adc6-860af889a201" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/inventory-service/inventory-service/src/main/java/com/ecommerce/inventory_service/Config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/inventory-service/src/main/java/com/ecommerce/inventory_service/Controllers/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/inventory-service/src/main/java/com/ecommerce/inventory_service/DTOs/OrderRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/inventory-service/src/main/java/com/ecommerce/inventory_service/DTOs/OrderRequestItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/inventory-service/src/main/java/com/ecommerce/inventory_service/DTOs/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/inventory-service/src/main/java/com/ecommerce/inventory_service/Entities/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/inventory-service/src/main/java/com/ecommerce/inventory_service/Repositoires/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/inventory-service/src/main/java/com/ecommerce/inventory_service/Services/ProductServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/ecommerce/order_service/Config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/ecommerce/order_service/Controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/ecommerce/order_service/DTO/OderRequestItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/ecommerce/order_service/DTO/OrderRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/ecommerce/order_service/Entitty/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/ecommerce/order_service/Entitty/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/ecommerce/order_service/Entitty/Orders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/ecommerce/order_service/OrderRepository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/ecommerce/order_service/Service/OrderService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "SohamBhandary"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/SohamBhandary/Coding-Shuttle-SpringBoot-Cohort-5.0.git",
+    "accountId": "4204631a-0e90-470f-89a6-82fddb7c9c67"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="3FqI5JLzE9qdD43Xdrl9MgQAsRE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.InventoryServiceApplication.executor": "Run",
+    "Application.OrderServiceApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Coding-Shuttle-Springboot-Cohort-5.0/Module-12-Into-toMicroservices",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="259893e6-5a3b-482b-adc6-860af889a201" name="Changes" comment="" />
+      <created>1782795987578</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782795987578</updated>
+    </task>
+    <servers />
+  </component>
+</project>
