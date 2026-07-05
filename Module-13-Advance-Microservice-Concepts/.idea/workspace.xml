@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="259893e6-5a3b-482b-adc6-860af889a201" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ecoom/api_gateway/Filters/AuthenticationGatewayFilterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ecoom/api_gateway/Service/JwtService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Module-12-Into-toMicroservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Module-12-Into-toMicroservices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/inventory-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/inventory-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/ecommerce/order_service/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/ecommerce/order_service/Controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
