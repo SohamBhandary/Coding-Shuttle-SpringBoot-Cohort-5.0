@@ -8,7 +8,7 @@ spring:
         git:
           uri: https://github.com/SohamBhandary/Ecom-ConfigServer.git
           username: SohamBhandary
-          password: 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
+          password:
           default-label: main
 
 server:
