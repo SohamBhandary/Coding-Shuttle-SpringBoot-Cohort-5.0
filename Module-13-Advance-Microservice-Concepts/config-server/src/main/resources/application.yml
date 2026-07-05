@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/SohamBhandary/Ecom-ConfigServer.git
+          username: SohamBhandary
+          password: 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
+          default-label: main
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
