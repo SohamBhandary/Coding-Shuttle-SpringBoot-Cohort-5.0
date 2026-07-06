@@ -1,6 +1,11 @@
-
-kafka.topic.user-random-topic: user-random-topic
-
 spring:
   kafka:
     bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.LongSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+kafka:
+  topic:
+    user-random-topic: user-random-topic
+    user-created-topic: user-created-topic

@@ -3,3 +3,19 @@ spring:
     bootstrap-servers: localhost:9092
     consumer:
       group-id: ${spring.application.name}
+      key-deserializer: org.apache.kafka.common.serialization.LongDeserializer
+      # 1. Wrap the value deserializer in ErrorHandlingDeserializer to prevent infinite loops
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      properties:
+        # 2. Define the delegate class that ErrorHandlingDeserializer will forward to
+        spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
+        spring.json:
+          trusted.packages: "com.codingshuttle.learnKafka.*"
+          # 3. Choose ONE of the following options to fix the case-sensitivity issue:
+
+          # OPTION A: Map the producer's Capital "Event" type name to your lowercase "event" class path
+          type.mapping: "com.codingshuttle.learnKafka.user_service.Event.UserCreatedEvent:com.codingshuttle.learnKafka.user_service.event.UserCreatedEvent"
+
+          # OPTION B: Alternatively, uncomment below to ignore type headers completely and force it to your class
+          # use.type.headers: false
+          # value.default.type: "com.codingshuttle.learnKafka.user_service.event.UserCreatedEvent"

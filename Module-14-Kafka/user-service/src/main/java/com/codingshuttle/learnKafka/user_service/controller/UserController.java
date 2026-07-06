@@ -1,15 +1,14 @@
 package com.codingshuttle.learnKafka.user_service.controller;
 
 
+import com.codingshuttle.learnKafka.user_service.DTO.CreateUserRequestDto;
+import com.codingshuttle.learnKafka.user_service.Service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Slf4j
@@ -17,10 +16,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class UserController {
 
+
+
     @Value("${kafka.topic.user-random-topic}")
     private String KAFKA_RANDOM_USER_TOPIC;
 
     private final KafkaTemplate<String,String> kafkaTemplate;
+   private final UserService userService;
+
+
+    @PostMapping
+    public ResponseEntity<String> createUser(@RequestBody CreateUserRequestDto createUserRequestDto) {
+        userService.createUser(createUserRequestDto);
+        return ResponseEntity.ok("User is created");
+    }
 
     @PostMapping("/{message}")
     public ResponseEntity<String> sendMessage(@PathVariable String message) {
