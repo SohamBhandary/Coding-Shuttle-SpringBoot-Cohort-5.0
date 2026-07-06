@@ -1,0 +1,22 @@
+{
+  "name": "UserCreatedEvent",
+  "namespace": "com.codingshuttle.learnKafka.event",
+  "type": "record",
+  "fields": [
+    {
+      "name": "id",
+      "type": "long",
+      "default": 0
+    },
+    {
+      "name": "fullName",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "default": ""
+    }
+  ]
+}
