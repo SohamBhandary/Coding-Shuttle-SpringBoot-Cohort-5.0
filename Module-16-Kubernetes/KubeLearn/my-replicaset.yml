@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-replica-set
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+  template: # template for the pods to be created
+    metadata:
+      name: my-new-pods
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: new-container
+          image: nginx
+          ports:
+            - containerPort: 80
