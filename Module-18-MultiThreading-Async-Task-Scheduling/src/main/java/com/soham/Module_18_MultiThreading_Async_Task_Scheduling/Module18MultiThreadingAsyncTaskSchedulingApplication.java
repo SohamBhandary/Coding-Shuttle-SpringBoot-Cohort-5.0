@@ -3,24 +3,26 @@ package com.soham.Module_18_MultiThreading_Async_Task_Scheduling;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.util.concurrent.*;
 
 @SpringBootApplication
 @Slf4j
+@EnableScheduling
 public class Module18MultiThreadingAsyncTaskSchedulingApplication {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		SpringApplication.run(Module18MultiThreadingAsyncTaskSchedulingApplication.class, args);
 
-		// Custom executor using non-daemon user threads to keep the app alive after main finishes
-		ExecutorService customExecutor = Executors.newFixedThreadPool(2);
-
-		learnCompletableFuture(customExecutor);
-
-		log.info("Main thread has finished and ended!");
-
-		customExecutor.shutdown();
+//		// Custom executor using non-daemon user threads to keep the app alive after main finishes
+//		ExecutorService customExecutor = Executors.newFixedThreadPool(2);
+//
+//		learnCompletableFuture(customExecutor);
+//
+//		log.info("Main thread has finished and ended!");
+//
+//		customExecutor.shutdown();
 	}
 
 	static void learnCompletableFuture(ExecutorService executor) {
