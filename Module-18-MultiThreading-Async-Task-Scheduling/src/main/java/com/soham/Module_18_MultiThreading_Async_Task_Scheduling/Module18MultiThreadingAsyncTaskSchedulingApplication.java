@@ -3,6 +3,7 @@ package com.soham.Module_18_MultiThreading_Async_Task_Scheduling;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.util.concurrent.*;
@@ -10,6 +11,7 @@ import java.util.concurrent.*;
 @SpringBootApplication
 @Slf4j
 @EnableScheduling
+@EnableAsync
 public class Module18MultiThreadingAsyncTaskSchedulingApplication {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
