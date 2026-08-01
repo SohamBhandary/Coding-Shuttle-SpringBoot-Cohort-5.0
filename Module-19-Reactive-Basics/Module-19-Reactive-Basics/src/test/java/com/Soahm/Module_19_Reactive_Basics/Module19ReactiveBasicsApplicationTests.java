@@ -1,10 +1,10 @@
-package com.Soham.Module_10_Aspect_Oriented_Programming;
+package com.Soahm.Module_19_Reactive_Basics;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Module10AspectOrientedProgrammingApplicationTests {
+class Module19ReactiveBasicsApplicationTests {
 
 	@Test
 	void contextLoads() {
