@@ -1,6 +1,22 @@
 spring:
   application:
-    name: Module-20-Webflux
-  threads:
-    virtual:
-      enabled: true
+    name: learnWebflux
+  #  threads:
+  #    virtual:
+  #      enabled: true
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/r2dbc
+    username: postgres
+    password: 0000
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+
+  server:
+    port: 8080
+    netty:
+      connection-timeout: 20s # Limits the duration allowed to establish the initial TCP socket connection.
+      idle-timeout: 60s # Closes the connection if no read or write operations occur for 60 seconds.
+
