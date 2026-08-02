@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: Module-20-Webflux
+  threads:
+    virtual:
+      enabled: true
