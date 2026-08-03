@@ -1,12 +1,11 @@
 package com.Soham.Module_20_Webflux.service.impl;
 
-
-import com.Soham.Module_20_Webflux.dto.UserRequest;
-import com.Soham.Module_20_Webflux.dto.UserResponse;
-import com.Soham.Module_20_Webflux.entity.User;
-import com.Soham.Module_20_Webflux.error.ResourceNotFoundException;
-import com.Soham.Module_20_Webflux.repository.UserRepository;
-import com.Soham.Module_20_Webflux.service.UserService;
+import com.codingshuttle.learnWebflux.dto.UserRequest;
+import com.codingshuttle.learnWebflux.dto.UserResponse;
+import com.codingshuttle.learnWebflux.entity.User;
+import com.codingshuttle.learnWebflux.error.ResourceNotFoundException;
+import com.codingshuttle.learnWebflux.repository.UserRepository;
+import com.codingshuttle.learnWebflux.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -35,6 +34,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Mono<UserResponse> createUser(UserRequest request) {
+
         return userRepository.existsByEmail(request.getEmail())
                 .flatMap(exists -> {
                     if (exists) return Mono.error(new IllegalArgumentException("User already exists with email: "+request.getEmail()));
