@@ -1,0 +1,32 @@
+name: my-app
+
+services:
+
+  user-service:
+    image: sohambhandary/user-service:latest
+    ports:
+      - "8081:8081"
+    networks:
+      - sample-network
+
+  product-service:
+    image: sohambhandary/product-service:latest
+    ports:
+      - "8082:8082"
+    networks:
+      - sample-network
+
+  order-service:
+    image: sohambhandary/order-service:latest
+    ports:
+      - "8083:8083"
+    depends_on:
+      - user-service
+      - product-service
+    networks:
+      - sample-network
+
+networks:
+  sample-network:
+    name: sample-network
+    driver: bridge
