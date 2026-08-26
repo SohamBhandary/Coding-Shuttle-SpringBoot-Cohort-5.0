@@ -1,0 +1,34 @@
+25-08-2026 20:52:41.827 [main] [-] INFO  user-service-c.e.u.UserServiceApplication.logStarting - Starting UserServiceApplication using Java 23.0.2 with PID 24060 (C:\Users\DELL\Downloads\simple-3-microservices\user-service\target\classes started by DELL in C:\Users\DELL\Downloads\simple-3-microservices)
+25-08-2026 20:52:41.831 [main] [-] INFO  user-service-c.e.u.UserServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+25-08-2026 20:52:43.709 [main] [-] INFO  user-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8081 (http)
+25-08-2026 20:52:43.725 [main] [-] INFO  user-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8081"]
+25-08-2026 20:52:43.728 [main] [-] INFO  user-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+25-08-2026 20:52:43.729 [main] [-] INFO  user-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.44]
+25-08-2026 20:52:43.799 [main] [-] INFO  user-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+25-08-2026 20:52:43.800 [main] [-] INFO  user-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1868 ms
+25-08-2026 20:52:44.863 [main] [-] INFO  user-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoints beneath base path '/actuator'
+25-08-2026 20:52:44.919 [main] [-] INFO  user-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8081"]
+25-08-2026 20:52:44.936 [main] [-] INFO  user-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8081 (http) with context path '/'
+25-08-2026 20:52:44.954 [main] [-] INFO  user-service-c.e.u.UserServiceApplication.logStarted - Started UserServiceApplication in 4.191 seconds (process running for 4.796)
+25-08-2026 21:12:47.774 [http-nio-8081-exec-1] [-] INFO  user-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-08-2026 21:12:47.818 [http-nio-8081-exec-1] [-] INFO  user-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+25-08-2026 21:12:47.997 [http-nio-8081-exec-1] [-] INFO  user-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 177 ms
+25-08-2026 21:12:48.591 [http-nio-8081-exec-1] [6a8db7f81596313f5136bf77cb97cc0f-5136bf77cb97cc0f] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 1
+25-08-2026 21:13:05.800 [http-nio-8081-exec-2] [6a8db809e09677c95e74851e93641857-5e74851e93641857] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 2
+25-08-2026 21:13:13.915 [http-nio-8081-exec-3] [6a8db811fd145dee3de80c7913d567dc-3de80c7913d567dc] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 3
+25-08-2026 21:13:43.357 [http-nio-8081-exec-4] [6a8db82ed0f1a3f3899d9bcb7d65a803-72519ff710d8765e] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 1
+25-08-2026 21:13:53.115 [http-nio-8081-exec-6] [6a8db839e461f0e5b742c5918d1543bd-44ff3c31f1469c5f] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 1
+25-08-2026 21:26:04.785 [http-nio-8081-exec-9] [6a8dbb14abdf24501139c14f848544df-1139c14f848544df] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 3
+25-08-2026 21:49:38.147 [http-nio-8081-exec-2] [6a8dc099c5f3883789da47230e2e886d-89da47230e2e886d] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 4
+25-08-2026 21:49:42.954 [http-nio-8081-exec-3] [6a8dc09e4d07983f5938cd6130fa6bf4-5938cd6130fa6bf4] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 5
+25-08-2026 21:49:46.202 [http-nio-8081-exec-4] [6a8dc0a2851caf72307e158f95aec3ff-307e158f95aec3ff] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 6
+25-08-2026 21:49:51.055 [http-nio-8081-exec-5] [6a8dc0a73774e87f25dfc80e78f74b16-25dfc80e78f74b16] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 7
+25-08-2026 21:49:54.548 [http-nio-8081-exec-6] [6a8dc0aa0156ad5694e6958dab0be2bf-94e6958dab0be2bf] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 8
+25-08-2026 21:49:58.182 [http-nio-8081-exec-7] [6a8dc0ae4077d0a1687af09d89856704-687af09d89856704] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 9
+25-08-2026 21:50:28.788 [http-nio-8081-exec-8] [6a8dc0ccfd93f9bcc53b0f43b9afc0ff-ff133421f37dfe9b] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 1
+25-08-2026 21:50:32.018 [http-nio-8081-exec-9] [6a8dc0cf2763b0bbd6b0bb7a961e0b50-f5b5f0de4a782547] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 1
+25-08-2026 21:50:35.710 [http-nio-8081-exec-10] [6a8dc0d3dbc586686e7dd3d36de1c72f-d217e055f5ec22de] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 1
+25-08-2026 21:50:39.376 [http-nio-8081-exec-2] [6a8dc0d766d05a7631a9df6268c36034-eeb244c5dcf4ff2b] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 1
+25-08-2026 21:53:35.063 [http-nio-8081-exec-5] [6a8dc1878903f9f1338d11e67a953a0a-acc9a6957dddb90f] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 1
+25-08-2026 21:57:32.387 [http-nio-8081-exec-7] [6a8dc274928e4295fad40173da80e62c-afba4bb2056b5b91] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 1
+25-08-2026 21:58:20.851 [http-nio-8081-exec-8] [6a8dc2a49332d5eee135ab86a64428cb-e135ab86a64428cb] INFO  user-service-c.e.u.controller.UserController.getUser - Fetching user: 313

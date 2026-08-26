@@ -1,0 +1,32 @@
+25-08-2026 20:52:38.603 [main] [-] INFO  product-service-c.e.p.ProductServiceApplication.logStarting - Starting ProductServiceApplication using Java 23.0.2 with PID 18436 (C:\Users\DELL\Downloads\simple-3-microservices\product-service\target\classes started by DELL in C:\Users\DELL\Downloads\simple-3-microservices)
+25-08-2026 20:52:38.607 [main] [-] INFO  product-service-c.e.p.ProductServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+25-08-2026 20:52:40.745 [main] [-] INFO  product-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8082 (http)
+25-08-2026 20:52:40.763 [main] [-] INFO  product-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8082"]
+25-08-2026 20:52:40.767 [main] [-] INFO  product-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+25-08-2026 20:52:40.768 [main] [-] INFO  product-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.44]
+25-08-2026 20:52:40.847 [main] [-] INFO  product-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+25-08-2026 20:52:40.847 [main] [-] INFO  product-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2142 ms
+25-08-2026 20:52:42.146 [main] [-] INFO  product-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoints beneath base path '/actuator'
+25-08-2026 20:52:42.214 [main] [-] INFO  product-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8082"]
+25-08-2026 20:52:42.233 [main] [-] INFO  product-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8082 (http) with context path '/'
+25-08-2026 20:52:42.252 [main] [-] INFO  product-service-c.e.p.ProductServiceApplication.logStarted - Started ProductServiceApplication in 4.573 seconds (process running for 5.128)
+25-08-2026 21:13:24.739 [http-nio-8082-exec-1] [-] INFO  product-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-08-2026 21:13:24.767 [http-nio-8082-exec-1] [-] INFO  product-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+25-08-2026 21:13:24.884 [http-nio-8082-exec-1] [-] INFO  product-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 114 ms
+25-08-2026 21:13:25.320 [http-nio-8082-exec-1] [6a8db81cfec3149564bb052b7d0927a3-64bb052b7d0927a3] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 1
+25-08-2026 21:13:32.667 [http-nio-8082-exec-4] [6a8db824bf4435f580786e09dde4a824-80786e09dde4a824] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 2
+25-08-2026 21:13:37.858 [http-nio-8082-exec-5] [6a8db8297fcfcb5631a4dd7d7d1c6508-31a4dd7d7d1c6508] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 3
+25-08-2026 21:13:43.705 [http-nio-8082-exec-7] [6a8db82ed0f1a3f3899d9bcb7d65a803-5b0070b3461a2b38] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 1
+25-08-2026 21:13:53.126 [http-nio-8082-exec-10] [6a8db839e461f0e5b742c5918d1543bd-78d35bae5c90a91f] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 1
+25-08-2026 21:26:10.003 [http-nio-8082-exec-2] [6a8dbb195851211aa485523a2acdf20b-a485523a2acdf20b] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 3
+25-08-2026 21:50:02.917 [http-nio-8082-exec-4] [6a8dc0b2af0bf75bb93dedceef9a23db-b93dedceef9a23db] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 4
+25-08-2026 21:50:06.438 [http-nio-8082-exec-5] [6a8dc0b6f5a05c8c6aa392dff9d680ae-6aa392dff9d680ae] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 5
+25-08-2026 21:50:10.721 [http-nio-8082-exec-7] [6a8dc0babab7de819e16206fa90bf722-9e16206fa90bf722] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 7
+25-08-2026 21:50:16.379 [http-nio-8082-exec-10] [6a8dc0c0191388d55225f297dc734301-5225f297dc734301] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 9
+25-08-2026 21:50:28.936 [http-nio-8082-exec-6] [6a8dc0ccfd93f9bcc53b0f43b9afc0ff-48af61a2133aadf2] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 1
+25-08-2026 21:50:32.045 [http-nio-8082-exec-3] [6a8dc0cf2763b0bbd6b0bb7a961e0b50-523adf605966d939] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 1
+25-08-2026 21:50:35.723 [http-nio-8082-exec-9] [6a8dc0d3dbc586686e7dd3d36de1c72f-080e77b42ddec241] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 1
+25-08-2026 21:50:39.395 [http-nio-8082-exec-2] [6a8dc0d766d05a7631a9df6268c36034-e2b4883e35723e83] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 1
+25-08-2026 21:53:35.091 [http-nio-8082-exec-5] [6a8dc1878903f9f1338d11e67a953a0a-d6fd76fece7d5173] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 1
+25-08-2026 21:57:32.414 [http-nio-8082-exec-10] [6a8dc274928e4295fad40173da80e62c-6ac2b71a69f8a811] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 1
+25-08-2026 21:58:09.338 [http-nio-8082-exec-6] [6a8dc29983c1162ab6dc004c06e655c0-b6dc004c06e655c0] INFO  product-service-c.e.p.controller.ProductController.getProduct - Fetching product: 21

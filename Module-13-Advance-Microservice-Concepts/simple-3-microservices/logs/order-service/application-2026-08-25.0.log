@@ -1,0 +1,32 @@
+25-08-2026 20:52:21.104 [main] [-] INFO  order-service-c.e.o.OrderServiceApplication.logStarting - Starting OrderServiceApplication using Java 23.0.2 with PID 26968 (C:\Users\DELL\Downloads\simple-3-microservices\order-service\target\classes started by DELL in C:\Users\DELL\Downloads\simple-3-microservices)
+25-08-2026 20:52:21.109 [main] [-] INFO  order-service-c.e.o.OrderServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+25-08-2026 20:52:22.613 [main] [-] INFO  order-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=8c8c80f7-fb53-3184-995c-8f747c83b066
+25-08-2026 20:52:23.059 [main] [-] INFO  order-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8083 (http)
+25-08-2026 20:52:23.078 [main] [-] INFO  order-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8083"]
+25-08-2026 20:52:23.081 [main] [-] INFO  order-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+25-08-2026 20:52:23.081 [main] [-] INFO  order-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.44]
+25-08-2026 20:52:23.184 [main] [-] INFO  order-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+25-08-2026 20:52:23.184 [main] [-] INFO  order-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1991 ms
+25-08-2026 20:52:24.680 [main] [-] INFO  order-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoints beneath base path '/actuator'
+25-08-2026 20:52:24.733 [main] [-] INFO  order-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8083"]
+25-08-2026 20:52:24.753 [main] [-] INFO  order-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8083 (http) with context path '/'
+25-08-2026 20:52:24.778 [main] [-] INFO  order-service-c.e.o.OrderServiceApplication.logStarted - Started OrderServiceApplication in 4.659 seconds (process running for 5.553)
+25-08-2026 21:13:42.519 [http-nio-8083-exec-1] [-] INFO  order-service-o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-08-2026 21:13:42.548 [http-nio-8083-exec-1] [-] INFO  order-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+25-08-2026 21:13:42.686 [http-nio-8083-exec-1] [-] INFO  order-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 135 ms
+25-08-2026 21:13:43.195 [http-nio-8083-exec-1] [6a8db82ed0f1a3f3899d9bcb7d65a803-899d9bcb7d65a803] INFO  order-service-c.e.o.controller.OrderController.getOrder - Fetching order: 101
+25-08-2026 21:13:43.716 [http-nio-8083-exec-1] [6a8db82ed0f1a3f3899d9bcb7d65a803-899d9bcb7d65a803] INFO  order-service-c.e.o.controller.OrderController.getOrder - Order assembled successfully
+25-08-2026 21:13:53.108 [http-nio-8083-exec-2] [6a8db839e461f0e5b742c5918d1543bd-b742c5918d1543bd] INFO  order-service-c.e.o.controller.OrderController.getOrder - Fetching order: 102
+25-08-2026 21:13:53.131 [http-nio-8083-exec-2] [6a8db839e461f0e5b742c5918d1543bd-b742c5918d1543bd] INFO  order-service-c.e.o.controller.OrderController.getOrder - Order assembled successfully
+25-08-2026 21:50:28.604 [http-nio-8083-exec-5] [6a8dc0ccfd93f9bcc53b0f43b9afc0ff-c53b0f43b9afc0ff] INFO  order-service-c.e.o.controller.OrderController.getOrder - Fetching order: 103
+25-08-2026 21:50:28.947 [http-nio-8083-exec-5] [6a8dc0ccfd93f9bcc53b0f43b9afc0ff-c53b0f43b9afc0ff] INFO  order-service-c.e.o.controller.OrderController.getOrder - Order assembled successfully
+25-08-2026 21:50:32.007 [http-nio-8083-exec-6] [6a8dc0cf2763b0bbd6b0bb7a961e0b50-d6b0bb7a961e0b50] INFO  order-service-c.e.o.controller.OrderController.getOrder - Fetching order: 104
+25-08-2026 21:50:32.060 [http-nio-8083-exec-6] [6a8dc0cf2763b0bbd6b0bb7a961e0b50-d6b0bb7a961e0b50] INFO  order-service-c.e.o.controller.OrderController.getOrder - Order assembled successfully
+25-08-2026 21:50:35.702 [http-nio-8083-exec-7] [6a8dc0d3dbc586686e7dd3d36de1c72f-6e7dd3d36de1c72f] INFO  order-service-c.e.o.controller.OrderController.getOrder - Fetching order: 105
+25-08-2026 21:50:35.731 [http-nio-8083-exec-7] [6a8dc0d3dbc586686e7dd3d36de1c72f-6e7dd3d36de1c72f] INFO  order-service-c.e.o.controller.OrderController.getOrder - Order assembled successfully
+25-08-2026 21:50:39.369 [http-nio-8083-exec-8] [6a8dc0d766d05a7631a9df6268c36034-31a9df6268c36034] INFO  order-service-c.e.o.controller.OrderController.getOrder - Fetching order: 106
+25-08-2026 21:50:39.402 [http-nio-8083-exec-8] [6a8dc0d766d05a7631a9df6268c36034-31a9df6268c36034] INFO  order-service-c.e.o.controller.OrderController.getOrder - Order assembled successfully
+25-08-2026 21:53:35.044 [http-nio-8083-exec-1] [6a8dc1878903f9f1338d11e67a953a0a-338d11e67a953a0a] INFO  order-service-c.e.o.controller.OrderController.getOrder - Fetching order: 107
+25-08-2026 21:53:35.101 [http-nio-8083-exec-1] [6a8dc1878903f9f1338d11e67a953a0a-338d11e67a953a0a] INFO  order-service-c.e.o.controller.OrderController.getOrder - Order assembled successfully
+25-08-2026 21:57:32.369 [http-nio-8083-exec-4] [6a8dc274928e4295fad40173da80e62c-fad40173da80e62c] INFO  order-service-c.e.o.controller.OrderController.getOrder - Fetching order: 109
+25-08-2026 21:57:32.433 [http-nio-8083-exec-4] [6a8dc274928e4295fad40173da80e62c-fad40173da80e62c] INFO  order-service-c.e.o.controller.OrderController.getOrder - Order assembled successfully
